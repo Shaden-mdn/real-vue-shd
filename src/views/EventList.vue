@@ -1,5 +1,6 @@
 <template>
   <h1>Events for Good</h1>
+  <div v-if="showExtra">Extra Stuff</div>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
@@ -10,6 +11,7 @@ import EventCard from '@/components/EventCard.vue'
 import EventService from '@/services/EventService.js'
 
 export default {
+  props: ['showExtra'],
   name: 'EventList',
   components: {
     EventCard

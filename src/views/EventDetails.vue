@@ -1,6 +1,7 @@
 <template>
   <div v-if="event">
     <h1>{{ event.title }}</h1>
+    <h2>You are on Page {{ page }}</h2>
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
   </div>
@@ -10,6 +11,7 @@
 import EventService from '@/services/EventService.js'
 export default {
   props: ['id'],
+  props: ['page'],
   data() {
     return {
       event: null

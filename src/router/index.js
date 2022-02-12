@@ -7,11 +7,18 @@ const routes = [
   {
     path: '/',
     name: 'EventList',
-    component: EventList
+    component: EventList,
+    props: (route) => ({ showExtra: route.query.e })
   },
   {
     path: '/event/:id',
     name: 'EventDetails',
+    props: true,
+    component: EventDetails
+  },
+  {
+    path: '/events/:page',
+    //name: 'Events',
     props: true,
     component: EventDetails
   },

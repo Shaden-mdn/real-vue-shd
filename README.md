@@ -1,4 +1,4 @@
-# real-world-shd
+# real-world-vue
 
 ## Project setup
 ```
